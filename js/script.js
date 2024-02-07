@@ -12,7 +12,7 @@
 
 
 
-//  funzione chiamata generateGrid() per generare la griglia al click dell'utente
+//  fuction  per generare la griglia al click dell'utente
 function generateGrid() {
     // Seleziona l'elemento  con id "grid" 
     const gridElement = document.querySelector("#grid");
@@ -24,7 +24,9 @@ function generateGrid() {
         
         // Aggiunge la classe "square" al div appena creato
         newElement.classList.add("square");
-        
+
+
+        newElement.textContent = randomNumbers();
         // Aggiunge il div appena creato come figlio di #grid
         gridElement.appendChild(newElement);
     }
@@ -32,3 +34,11 @@ function generateGrid() {
 
 //  event listener al pulsante #start che chiama la funzione generateGrid() quando viene cliccato
 document.getElementById("start").addEventListener("click", generateGrid);
+
+
+
+
+// fuction che crea numeri random da 1 a 100
+function randomNumbers() {
+    return Math.floor(Math.random() * 100) + 1;
+}

@@ -13,13 +13,16 @@
     margin-top: 20px;
 }
 
+
 .square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: lightgray;
     border: 1px solid gray;
     border-radius: 5px;
     height: 40px;
-    width: 40px;
-   
+ 
     cursor: pointer;
 }
 
