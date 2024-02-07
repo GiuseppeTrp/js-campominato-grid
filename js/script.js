@@ -25,8 +25,16 @@ function generateGrid() {
         // Aggiunge la classe "square" al div appena creato
         newElement.classList.add("square");
 
-
+    //   aggiungo il numero casuale all elemento
         newElement.textContent = randomNumbers();
+
+// listener per colorare lo square al click dell utente
+        newElement.addEventListener("click", function() {
+            // Colora la cella di azzurro al click
+            this.style.backgroundColor = "lightblue";
+            // Stampa il numero della cella cliccata nella console
+            console.log("Cella cliccata: " + this.textContent);
+        });
         // Aggiunge il div appena creato come figlio di #grid
         gridElement.appendChild(newElement);
     }
